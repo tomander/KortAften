@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Help for senior people without memory and calendar">
+    <meta name="keywords" content="kortaften">
+    <meta name="author" content="Tom A">
+
+    <title>Er det kortaften?</title>
+    <style>
+        body {
+            background-color: green;
+            /* background-image: url(Playing-Cards-640x480.jpg*/
+        }
+
+        h1 {
+            font-family: constantia,georgia,serif;
+            font-size: 48pt;
+            text-align: center;
+            line-height: 4em;
+            color: #ccc;
+        }
+
+        h2 {
+            font-family: candara,verdana,sans-serif;
+            font-size: 48pt;
+            text-align: center;
+            color: #ccc;
+        }
+
+        .yes {
+            color: #5f5;
+        }
+
+        .no {
+            color: red;
+        }
+    </style>
+    <!---->
+    <script>type = "text/javascript"</script>
+    <script>
+        function erdetKortAften() {
+            var d = new Date();
+            var elem = document.getElementById("answer");
+            if (d.getMonth() == 9 && d.getDate() == 10) {
+                elem.innerHTML = "Ja";
+                elem.className = "yes";
+            } else {
+                elem.innerHTML = "Nej";
+                elem.className = "no";
+            }
+        }
+    </script>
+</head>
+<body onload="erdetKortAften();">
+
+    <h1>Er det kortaften?</h1>
+
+    <h2 id="answer" class="no"></h2>
+
+</body>
+</html>
